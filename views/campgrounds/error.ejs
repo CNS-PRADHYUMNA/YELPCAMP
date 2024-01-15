@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oops! Our Tech Team Went on a Mission</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbs5y5ndzkm5FVdTB0T3/uthVaWV+kTJtLpN5tSZ/an3QyI2tU6b6s62M5h11hvP"
+      crossorigin="anonymous"
+    />
+
+    <!-- Custom Styles -->
+    <style>
+      body {
+        background-image: url("https://images.unsplash.com/photo-1533873984035-25970ab07461?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        font-size: 1.5em;
+      }
+
+      .container {
+        background-color: rgba(2, 2, 2, 0.8);
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(196, 194, 194, 0.1);
+        padding: 20px;
+        text-align: center;
+        max-width: 400px;
+      }
+
+      h2 {
+        color: #ffffff;
+      }
+
+      p {
+        color: #ffffff;
+        font-style: italic;
+      }
+
+      .funny-image {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+      }
+
+      button {
+        background-color: #007bff;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 20px;
+        font-size: 1em;
+      }
+
+      button:hover {
+        background-color: #f34040;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <img
+        class="funny-image"
+        src="https://www.techrepublic.com/wp-content/uploads/2017/05/cat-tech-support-meme.jpg"
+        alt="Funny Illustration"
+      />
+      <h2 class="mb-4">Oops! Our Tech Team Went on a Mission</h2>
+      <p>
+        Our tech team is on a mission to find a perfect match for the page
+        owner. While they are away, our cat is taking a coffee break. Please be
+        patient, and we'll let you know if they find a match or if our cat
+        returns. <br />
+      </p>
+      <p
+        id="errorMessage"
+        style="color: rgb(255, 0, 0); font-weight: 600; font-size: 1.2em"
+      >
+        BTW...? <%= msg %>
+      </p>
+
+      <button onclick="goBack()">Go Back</button>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-GLhlTQ8i1+ea1O8EBJxJ6ftQFz9qOO2K1Zl5n5txB4Z/JN6IjfuF04l5om5gI3j5"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Custom Script to Go Back -->
+    <script>
+      function goBack() {
+        window.location.replace(document.referrer);
+      }
+    </script>
+  </body>
+</html>

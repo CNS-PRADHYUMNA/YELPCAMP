@@ -1,0 +1,95 @@
+<!-- views/404.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        font-family: "Arial", sans-serif;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-attachment: fixed;
+      }
+
+      .container {
+        text-align: center;
+        z-index: 1;
+        color: var(--text-color); /* Set text color from CSS variable */
+      }
+
+      h1 {
+        font-size: 3em;
+        margin-bottom: 20px;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 1); /* White light glow effect */
+      }
+
+      p {
+        font-size: 1.5em;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 1); /* White light glow effect */
+        line-height: 1.6;
+      }
+
+      .funny-text {
+        font-style: italic;
+        font-weight: bold;
+        color: #ffd700; /* Gold color for the funny text */
+      }
+
+      .funny-image {
+        max-width: 40%;
+        height: auto;
+        margin-top: 20px;
+      }
+    </style>
+    <title>404 - Not Found</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="display-3">404 - Not Found</h1>
+      <p class="lead">
+        Oops! It seems like you've stumbled upon a black hole in the webiverse.
+        Don't worry; you're not lost, just temporarily misplaced in the digital
+        cosmos.
+      </p>
+      <p>
+        In the parallel universe of <span class="funny-text">404-ology</span>,
+        missing pages are rumored to have taken vacations in distant realms of
+        non-existence. They're probably sipping pixelated drinks on the beaches
+        of Null Island!
+      </p>
+      <img
+        class="funny-image"
+        src="https://ih1.redbubble.net/image.980012480.5663/mo,small,flatlay,product_square,600x600.u3.webp"
+        alt="Funny Illustration"
+      />
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const body = document.body;
+
+        // Function to generate a random dark color (even darker shades)
+        function getRandomDarkColor() {
+          return `rgb(${Math.floor(Math.random() * 16)}, ${Math.floor(
+            Math.random() * 16
+          )}, ${Math.floor(Math.random() * 16)})`;
+        }
+
+        // Apply a random gradient background to the body (from left to right)
+        body.style.background = `linear-gradient(to right, ${getRandomDarkColor()}, ${getRandomDarkColor()})`;
+
+        // Set text color to white with glowing effect
+        document.documentElement.style.setProperty("--text-color", "white");
+      });
+    </script>
+  </body>
+</html>
